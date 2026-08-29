@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dafbc5c3b882554ebc16c4bacbc9d3c, type: 3}
+  m_Name: SpawnConfig
+  m_EditorClassIdentifier: _Project.Runtime::Project.Configs.SpawnConfig
+  _enemies:
+  - _enemy: {fileID: 11400000, guid: 6d2c0a1842a7e184a8a27d1b01084f5f, type: 2}
+    _weight: 3
+  - _enemy: {fileID: 11400000, guid: a79ff69db9734e84f985b44db4090e70, type: 2}
+    _weight: 2
+  - _enemy: {fileID: 11400000, guid: fb99fc6191fbb734ab6e194bd4279850, type: 2}
+    _weight: 1
+  - _enemy: {fileID: 11400000, guid: 21394c6d1791b4c4c8bd790c90e336f2, type: 2}
+    _weight: 1.5
+  - _enemy: {fileID: 11400000, guid: ce559c84ceef8b346aa15fc18afd41fa, type: 2}
+    _weight: 54
+  _minAliveEnemies: 5
+  _maxAliveEnemies: 30
+  _spawnInterval: 1.5
+  _spawnBatchSize: 1
+  _spawnRadius:
+    _min: 13
+    _max: 18
+  _arenaRadius: 40
+  _extraEnemyPerSecond: 0.08

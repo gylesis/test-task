@@ -1,0 +1,25 @@
+* text=auto
+
+*.cs diff=csharp text
+*.cginc text
+*.shader text
+
+*.unity binary
+*.prefab binary
+*.asset binary
+*.mat binary
+*.anim binary
+*.controller binary
+*.mask binary
+*.physicMaterial binary
+
+*.fbx binary
+*.FBX binary
+*.png binary
+*.jpg binary
+*.psd binary
+*.tga binary
+*.wav binary
+*.mp3 binary
+*.ogg binary
+*.dll binary

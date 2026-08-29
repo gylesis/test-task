@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b03222d20294114e89885e008eb604d, type: 3}
+  m_Name: VfxConfig
+  m_EditorClassIdentifier: _Project.Runtime::Project.Configs.VfxConfig
+  _effects:
+  - _id: enemy_hit
+    _prefab: {fileID: 3806729089722945219, guid: 8ecb055e4ea019a438e848c508169533, type: 3}
+    _poolSize: 12
+  - _id: enemy_death
+    _prefab: {fileID: 2060521911027806302, guid: c72731652d03ebc45ac4bd6d83d6e845, type: 3}
+    _poolSize: 12
+  - _id: player_hit
+    _prefab: {fileID: 6363212526368624787, guid: d3bbee8a7b6913944a247093ef736c95, type: 3}
+    _poolSize: 12
+  - _id: muzzle_flash
+    _prefab: {fileID: 4003206032086847620, guid: fc7ca78e7c492f748a599708fe1f19d3, type: 3}
+    _poolSize: 12
+  - _id: impact
+    _prefab: {fileID: 8459128736295767689, guid: 9f99fe5a34c526c45a763e8fafd24130, type: 3}
+    _poolSize: 12
+  _defaultPoolSize: 8

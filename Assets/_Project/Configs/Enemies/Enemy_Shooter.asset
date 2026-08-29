@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7853a73d8849024b93f78a0ab902f33, type: 3}
+  m_Name: Enemy_Shooter
+  m_EditorClassIdentifier: _Project.Runtime::Project.Configs.EnemyConfig
+  _prefab: {fileID: 1900166859472652722, guid: 2f9d4f742fb5bee41ad0611b44709b16, type: 3}
+  _maxHealth: 22
+  _moveSpeed: 2.6
+  _rotationSpeed: 720
+  _animationSpeedReference: 2.6
+  _attackType: 1
+  _damage:
+    _min: 5
+    _max: 9
+  _attackInterval: 1.4
+  _attackRange: 11
+  _attackRangeExitMultiplier: 1.25
+  _keepDistance: 5
+  _retreatSpeedMultiplier: 0.6
+  _aimDelay: 0.25
+  _projectilePrefab: {fileID: 3773338913932531428, guid: b8d335b452843b94891b04fd70255542, type: 3}
+  _projectileSpeed: 13
+  _projectileLifetime: 3
+  _projectileRadius: 0.22
+  _muzzleHeight: 1.2
+  _hitMask:
+    serializedVersion: 2
+    m_Bits: 256
+  _obstacleMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  _radius: 0.45
+  _height: 1.8
+  _healthBarHeight: 2.2
+  _hideHealthBarWhenFull: 0
+  _useRagdoll: 1
+  _deathImpulse:
+    _min: 20
+    _max: 40
+  _deathImpulseUp: 20
+  _deathDelay: 2.1833334
+  _spawnDelay: 0.25
+  _separationRadius: 1.4
+  _separationWeight: 1.2
