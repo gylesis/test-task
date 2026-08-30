@@ -8,7 +8,7 @@ namespace Project.UI
     {
         [SerializeField] private RectTransform _background;
         [SerializeField] private RectTransform _handle;
-        [SerializeField] private float _handleRange = 60f;
+        [SerializeField, Range(0.1f, 1f)] private float _handleRangeFactor = 0.45f;
         [SerializeField] private bool _hideWhenIdle;
 
         private Canvas _canvas;
@@ -16,6 +16,18 @@ namespace Project.UI
         private Vector2 _direction;
 
         public Vector2 Direction => _direction;
+
+        private float HandleRange
+        {
+            get
+            {
+                if (_background == null)
+                    return 0f;
+
+                var size = _background.rect.size;
+                return Mathf.Min(size.x, size.y) * 0.5f * _handleRangeFactor;
+            }
+        }
 
         private void Awake()
         {
@@ -48,8 +60,14 @@ namespace Project.UI
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 _background, eventData.position, _eventCamera, out var localPoint);
 
-            var offset = Vector2.ClampMagnitude(localPoint, _handleRange);
-            _direction = offset / _handleRange;
+            var range = HandleRange;
+
+            if (range <= 0.0001f)
+                return;
+
+            var offset = Vector2.ClampMagnitude(localPoint - _background.rect.center, range);
+
+            _direction = offset / range;
 
             if (_handle != null)
                 _handle.anchoredPosition = offset;

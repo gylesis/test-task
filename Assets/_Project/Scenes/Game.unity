@@ -119,6 +119,74 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &99515946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 99515949}
+  - component: {fileID: 99515948}
+  - component: {fileID: 99515947}
+  m_Layer: 0
+  m_Name: GlobalVolume (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &99515947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99515946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee3c61e94ddc084aa2cf1b7bd09aee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: _Project.Runtime::Project.UI.DamageVignetteView
+  _color: {r: 0.75, g: 0.05, b: 0.05, a: 1}
+  _intensity: 0.55
+  _smoothness: 0.5
+  _fadeIn: 0.06
+  _fadeOut: 0.35
+  _priority: 10
+--- !u!114 &99515948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99515946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 0
+  sharedProfile: {fileID: 11400000, guid: e75a9b5b97d6e654292029ac099b367f, type: 2}
+--- !u!4 &99515949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99515946}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &203331981
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,9 +506,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: _Project.Runtime::Project.CameraLogic.CameraShake
   _duration: 0.35
   _strength: 1.2
-  _verticalFactor: 0.35
   _vibrato: 18
   _randomness: 90
+  _verticalFactor: 0.35
   _rollFactor: 3
   _fadeOut: 1
 --- !u!114 &518748810
@@ -1035,6 +1103,7 @@ SceneRoots:
   - {fileID: 203331983}
   - {fileID: 203333613}
   - {fileID: 1144866662}
+  - {fileID: 99515949}
   - {fileID: 634684300}
   - {fileID: 518748813}
   - {fileID: 2017396706}

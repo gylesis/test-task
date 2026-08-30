@@ -65,8 +65,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 616e6dde84379b44a9675b64d1983506, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 61f86922b20eb674eb64d32b0d6db4ab, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
@@ -694,7 +694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: _Project.Runtime::Project.UI.JoystickView
   _background: {fileID: 7017915735479246611}
   _handle: {fileID: 5153985103437275924}
-  _handleRange: 90
+  _handleRangeFactor: 0.45
   _hideWhenIdle: 0
 --- !u!1001 &2115361332966056375
 PrefabInstance:

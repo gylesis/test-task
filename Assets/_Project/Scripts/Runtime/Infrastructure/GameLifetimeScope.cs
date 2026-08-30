@@ -96,6 +96,7 @@ namespace Project.Infrastructure
             builder.RegisterComponentInHierarchy<SurvivalTimerView>();
             builder.RegisterComponentInHierarchy<HudMenu>();
             builder.RegisterComponentInHierarchy<GameOverMenu>();
+            builder.RegisterComponentInHierarchy<DamageVignetteView>();
         }
 
         private static void ResolveSceneComponents(IObjectResolver container)
@@ -107,6 +108,7 @@ namespace Project.Infrastructure
             container.Resolve<SurvivalTimerView>();
             container.Resolve<HudMenu>();
             container.Resolve<GameOverMenu>();
+            container.Resolve<DamageVignetteView>();
         }
     }
 }

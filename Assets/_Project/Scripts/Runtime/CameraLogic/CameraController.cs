@@ -12,6 +12,7 @@ namespace Project.CameraLogic
         private CameraConfig _config;
         private PlayerController _player;
         private Vector3 _velocity;
+        private float _appliedAspect;
 
         [Inject]
         public void Construct(GameConfig gameConfig, PlayerController player)
@@ -19,7 +20,7 @@ namespace Project.CameraLogic
             _config = gameConfig.Camera;
             _player = player;
             
-            _camera.fieldOfView = _config.FieldOfView;
+            ApplyFieldOfView();
             SnapToTarget();
         }
 
@@ -45,6 +46,35 @@ namespace Project.CameraLogic
                 Time.deltaTime);
 
             transform.rotation = Quaternion.Euler(_config.FixedRotation);
+
+            ApplyFieldOfView();
+        }
+
+        private void ApplyFieldOfView()
+        {
+            if (_camera == null)
+                return;
+
+            var aspect = _camera.aspect;
+
+            if (Mathf.Approximately(aspect, _appliedAspect))
+                return;
+
+            _appliedAspect = aspect;
+            _camera.fieldOfView = ResolveFieldOfView(aspect);
+        }
+
+        private float ResolveFieldOfView(float aspect)
+        {
+            var reference = _config.ReferenceAspect;
+
+            if (aspect <= 0f || aspect >= reference)
+                return _config.FieldOfView;
+
+            var halfHeight = Mathf.Tan(_config.FieldOfView * 0.5f * Mathf.Deg2Rad);
+            var scaled = halfHeight * reference / aspect;
+
+            return Mathf.Clamp(2f * Mathf.Atan(scaled) * Mathf.Rad2Deg, 1f, 179f);
         }
 
         private bool HasTarget()
